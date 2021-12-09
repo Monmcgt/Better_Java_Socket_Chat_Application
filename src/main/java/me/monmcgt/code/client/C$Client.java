@@ -54,13 +54,13 @@ public class C$Client implements Runnable {
                 Data data = (Data) this.in.readObject();
                 String content = null;
                 switch (data.getType()) {
-                    case JOIN:
+                    case JOIN :
                         content = "[SERVER] " + data.getAuthor() + " joined the server.";
                         break;
-                    case LEAVE:
+                    case LEAVE :
                         content = "[SERVER] " + data.getAuthor() + " left the server.";
                         break;
-                    case MESSAGE:
+                    case MESSAGE :
                         content = "[" + data.getAuthor() + "] " + data.getMessage();
                         break;
                 }
